@@ -7,8 +7,7 @@ Otra aplicación del curso de Node.
 
 En este caso, se trata de un servidor que usará web socket.
 
-
-:warning: **Este proyecto se encuentra actualmente en desarrollo**
+Recuerden que se debe ejecutar ```npm install ``` para reconstruir los módulos de Node.
 
 #### Índice
 
