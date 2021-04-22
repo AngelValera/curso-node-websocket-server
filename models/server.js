@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const { socketController } = require("../sockets/controller");
 
 
 class Server {
@@ -16,6 +17,10 @@ class Server {
 
 		// Rutas de mi aplicacion
 		this.routes();
+
+		// Configuración de Sockets
+		this.sockets();
+
 	}
 
 	async conectarDB() {
@@ -26,6 +31,12 @@ class Server {
 		
         //this.app.use(this.paths.auth, require("../routes/auth"));		
 	}
+
+	sockets(){
+
+		this.io.on('connection', socketController);
+	}
+
 
 	middlewares() {
 		// Cors
